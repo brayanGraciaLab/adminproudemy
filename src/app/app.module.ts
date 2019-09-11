@@ -1,16 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//Rutas
+import { APP_ROUTES } from './app.routes';
 
-import { AppRoutingModule } from './app-routing.module';
+//Modulos
+import {PagesModule} from 'src/app/pages/pages.module'
+
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './login/register.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    // NopagefoundComponent,
+   
+    // HeaderComponent,
+    // SidebarComponent,
+    // BreadcrumbsComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    APP_ROUTES,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
