@@ -1,7 +1,19 @@
 import { Routes } from "@angular/router";
+import {DashboarhComponent} from './dashboarh/dashboarh.component';
+import {ProgressComponent} from './progress/progress.component';
+import {Graficas1Component} from './graficas1/graficas1.component'
+import {PagesComponent} from './pages.component'
 
-
-const childRoutes:Routes = [
+const pagesRoutes:Routes = [
     
-    
+    {   
+        path:'', 
+        component:PagesComponent,
+        children:[
+            {path:'dashboarh',component:DashboarhComponent},
+            {path:'progress',component:ProgressComponent},
+            {path:'graficas1', component:Graficas1Component},
+            {path:'',redirectTo:'/dashboarh',pathMatch:'full'},
+        ]
+    },
 ]
