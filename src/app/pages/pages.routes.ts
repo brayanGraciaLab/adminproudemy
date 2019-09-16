@@ -1,4 +1,4 @@
-import { Routes } from "@angular/router";
+import { Routes, RouterModule } from "@angular/router";
 import {DashboarhComponent} from './dashboarh/dashboarh.component';
 import {ProgressComponent} from './progress/progress.component';
 import {Graficas1Component} from './graficas1/graficas1.component'
@@ -16,4 +16,6 @@ const pagesRoutes:Routes = [
             {path:'',redirectTo:'/dashboarh',pathMatch:'full'},
         ]
     },
-]
+];
+
+export const APP_PAGES = RouterModule.forChild(pagesRoutes);

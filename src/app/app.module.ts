@@ -10,6 +10,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
+import { IncrementadorComponent } from './components/incrementador/incrementador.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -22,12 +25,15 @@ import { RegisterComponent } from './login/register.component';
     // SidebarComponent,
     // BreadcrumbsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+ 
+    //IncrementadorComponent
   ],
   imports: [
     BrowserModule,
     APP_ROUTES,
-    PagesModule
+    PagesModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
