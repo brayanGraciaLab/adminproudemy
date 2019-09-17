@@ -12,7 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
 import { IncrementadorComponent } from './components/incrementador/incrementador.component';
 import { FormsModule } from '@angular/forms';
-import{SettingService} from './services/setting.service'
+
+import {ServiceModule} from './services/service.module'
 
 
 @NgModule({
@@ -33,9 +34,11 @@ import{SettingService} from './services/setting.service'
     BrowserModule,
     APP_ROUTES,
     PagesModule,
-    FormsModule
+    FormsModule,
+    ServiceModule,
+    
   ],
-  providers: [SettingService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
